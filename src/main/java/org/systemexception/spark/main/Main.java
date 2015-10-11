@@ -1,6 +1,7 @@
 package org.systemexception.spark.main;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import static spark.Spark.get;
 
@@ -11,14 +12,16 @@ import static spark.Spark.get;
 public class Main {
 
 	public static void main(String[] args) {
+
 		get("/hello", (request, response) -> "Hello World");
 
-
 		get("/time", (request, response) -> getDate());
+
 	}
 
 	private static String getDate() {
 		LocalDateTime localDateTime = LocalDateTime.now();
-		return localDateTime.toString();
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");
+		return localDateTime.format(dateTimeFormatter);
 	}
 }
