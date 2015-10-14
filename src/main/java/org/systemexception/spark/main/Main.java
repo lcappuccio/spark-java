@@ -13,7 +13,7 @@ class Main {
 
 	public static void main(String[] args) {
 
-		get("/hello", (request, response) -> "Hello World");
+		get("/hello", (request, response) -> "Hello World" + "<hr>" + getDate());
 
 		get("/time", (request, response) -> getDate());
 
