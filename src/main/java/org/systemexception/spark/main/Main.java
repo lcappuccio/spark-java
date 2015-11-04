@@ -1,7 +1,11 @@
 package org.systemexception.spark.main;
 
+import spark.ModelAndView;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
 
 import static spark.Spark.get;
 
@@ -16,6 +20,12 @@ class Main {
 		get("/hello", (request, response) -> "Hello World" + "<hr>" + getDate());
 
 		get("/time", (request, response) -> getDate());
+
+		get("/hello_message", (request, response) -> {
+			Map<String, Object> attributes = new HashMap<>();
+			attributes.put("message", "Hello World!");
+			return new ModelAndView(attributes, "hello.ftl");
+		}, new FreeMarkerEngine());
 
 	}
 
