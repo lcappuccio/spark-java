@@ -24,6 +24,7 @@ class Main {
 		get("/hello_message", (request, response) -> {
 			Map<String, Object> attributes = new HashMap<>();
 			attributes.put("message", "Hello World!");
+			attributes.put("date", getDate());
 			return new ModelAndView(attributes, "hello.ftl");
 		}, new FreeMarkerEngine());
 
@@ -31,7 +32,7 @@ class Main {
 
 	private static String getDate() {
 		LocalDateTime localDateTime = LocalDateTime.now();
-		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 		return localDateTime.format(dateTimeFormatter);
 	}
 }
