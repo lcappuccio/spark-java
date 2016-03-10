@@ -1,3 +1,4 @@
+<#-- @ftlvariable name="date" type="java.lang.String" -->
 <#-- @ftlvariable name="message" type="java.lang.String" -->
 
 <!DOCTYPE HTML>
