@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>SimplexDB</title>
+    <title>Spark Java</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <#--<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png"/>-->
     <!-- CSS -->
