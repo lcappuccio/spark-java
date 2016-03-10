@@ -1,11 +1,11 @@
 package org.systemexception.spark.main;
 
-import spark.ModelAndView;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
+
+import spark.ModelAndView;
 
 import static spark.Spark.get;
 
@@ -32,7 +32,7 @@ class Main {
 
 	private static String getDate() {
 		LocalDateTime localDateTime = LocalDateTime.now();
-		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS");
 		return localDateTime.format(dateTimeFormatter);
 	}
 }
