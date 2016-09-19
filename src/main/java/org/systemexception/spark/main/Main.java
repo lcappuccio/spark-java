@@ -1,11 +1,10 @@
 package org.systemexception.spark.main;
 
+import spark.ModelAndView;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
-
-import spark.ModelAndView;
+import java.util.*;
 
 import static spark.Spark.get;
 
@@ -24,6 +23,7 @@ class Main {
 		get("/hello_message", (request, response) -> {
 			Map<String, Object> attributes = new HashMap<>();
 			attributes.put("message", "Hello World!");
+			attributes.put("stringList", getRandomStrings());
 			attributes.put("date", getDate());
 			return new ModelAndView(attributes, "hello.ftl");
 		}, new FreeMarkerEngine());
@@ -34,5 +34,15 @@ class Main {
 		LocalDateTime localDateTime = LocalDateTime.now();
 		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS");
 		return localDateTime.format(dateTimeFormatter);
+	}
+
+	private static List<String> getRandomStrings() {
+		final int listSize = 5;
+		List<String> stringList = new ArrayList<>();
+		Random random = new Random(System.currentTimeMillis());
+		for (int i = 0; i < listSize; i++) {
+			stringList.add(String.valueOf(random.nextLong()));
+		}
+		return stringList;
 	}
 }

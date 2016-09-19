@@ -13,7 +13,7 @@ import java.io.StringWriter;
  * @author leo
  * @date 04/11/15 22:05
  */
-public class FreeMarkerEngine extends TemplateEngine {
+class FreeMarkerEngine extends TemplateEngine {
 
 	/**
 	 * The FreeMarker configuration
@@ -26,16 +26,6 @@ public class FreeMarkerEngine extends TemplateEngine {
 	public FreeMarkerEngine() {
 		this.configuration = createDefaultConfiguration();
 	}
-
-	/**
-	 * Creates a FreeMarkerEngine with a configuration
-	 *
-	 * @param configuration The Freemarker configuration
-	 */
-	public FreeMarkerEngine(Configuration configuration) {
-		this.configuration = configuration;
-	}
-
 
 	/**
 	 * {@inheritDoc}
@@ -52,17 +42,6 @@ public class FreeMarkerEngine extends TemplateEngine {
 		} catch (IOException | TemplateException e) {
 			throw new IllegalArgumentException(e);
 		}
-	}
-
-	/**
-	 * Sets FreeMarker configuration.
-	 * Note: If configuration is not set the default configuration
-	 * will be used.
-	 *
-	 * @param configuration the configuration to set
-	 */
-	public void setConfiguration(Configuration configuration) {
-		this.configuration = configuration;
 	}
 
 	private Configuration createDefaultConfiguration() {
