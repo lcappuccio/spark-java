@@ -1,6 +1,6 @@
 <#-- @ftlvariable name="date" type="java.lang.String" -->
 <#-- @ftlvariable name="message" type="java.lang.String" -->
-
+<#-- @ftlvariable name="stringList" type="java.util.List" -->
 <!DOCTYPE HTML>
 <html>
 <head>
