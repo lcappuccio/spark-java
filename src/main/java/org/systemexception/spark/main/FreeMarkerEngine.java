@@ -35,8 +35,7 @@ public class FreeMarkerEngine extends TemplateEngine {
 	public FreeMarkerEngine(Configuration configuration) {
 		this.configuration = configuration;
 	}
-
-
+	
 	/**
 	 * {@inheritDoc}
 	 */
