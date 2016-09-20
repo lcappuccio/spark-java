@@ -1,5 +1,6 @@
 package org.systemexception.spark.main;
 
+import org.systemexception.spark.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
 
 import java.time.LocalDateTime;
@@ -37,9 +38,9 @@ class Main {
 	}
 
 	private static List<String> getRandomStrings() {
-		final int listSize = 5;
 		List<String> stringList = new ArrayList<>();
 		Random random = new Random(System.currentTimeMillis());
+		final int listSize = random.nextInt(10);
 		for (int i = 0; i < listSize; i++) {
 			stringList.add(String.valueOf(random.nextLong()));
 		}

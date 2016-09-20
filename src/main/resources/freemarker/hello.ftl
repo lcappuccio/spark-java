@@ -15,13 +15,15 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>${message}</h1>
-<hr>
-<h2>Some Random Strings</h2>
+<div class="container-fluid">
+	<h1>${message}</h1>
+	<hr>
+	<h2>Some Random Strings</h2>
 <#list stringList as string>
 <p>${string}
-</#list>
-<hr>
+	</#list>
+	<hr>
 ${date}
+</div>
 </body>
 </html>
