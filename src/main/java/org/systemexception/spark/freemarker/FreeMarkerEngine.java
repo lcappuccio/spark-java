@@ -1,4 +1,4 @@
-package org.systemexception.spark.main;
+package org.systemexception.spark.freemarker;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -13,7 +13,7 @@ import java.io.StringWriter;
  * @author leo
  * @date 04/11/15 22:05
  */
-class FreeMarkerEngine extends TemplateEngine {
+public class FreeMarkerEngine extends TemplateEngine {
 
 	/**
 	 * The FreeMarker configuration

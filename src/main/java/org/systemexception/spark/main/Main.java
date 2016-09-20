@@ -1,5 +1,6 @@
 package org.systemexception.spark.main;
 
+import org.systemexception.spark.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
 
 import java.time.LocalDateTime;
