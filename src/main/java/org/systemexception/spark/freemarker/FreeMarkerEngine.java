@@ -18,7 +18,7 @@ public class FreeMarkerEngine extends TemplateEngine {
 	/**
 	 * The FreeMarker configuration
 	 */
-	private Configuration configuration;
+	private final Configuration configuration;
 
 	/**
 	 * Creates a FreeMarkerEngine
