@@ -48,7 +48,7 @@ class Main {
 		Random random = new Random(System.currentTimeMillis());
 		final int listSize = random.nextInt(10);
 		for (int i = 0; i < listSize; i++) {
-			stringList.add(String.valueOf(random.nextLong()));
+			stringList.add(UUID.randomUUID().toString());
 		}
 		return stringList;
 	}
